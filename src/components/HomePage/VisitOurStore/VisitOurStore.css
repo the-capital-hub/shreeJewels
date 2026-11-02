@@ -1,0 +1,270 @@
+.visit-store {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 64px 5%;
+  color: #f7f2e9;
+  background: #17131b url("../../../assets/store/bg.png")
+    center / cover no-repeat;
+}
+
+.visit-store__overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 19, 27, 0.28),
+    rgba(23, 19, 27, 0.78) 48%,
+    rgba(23, 19, 27, 0.28)
+  );
+}
+
+.visit-store__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 76px);
+  width: min(100%, 1440px);
+  margin: 0 auto;
+}
+
+.visit-store__content {
+  min-width: 0;
+}
+
+.visit-store__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.visit-store__eyebrow p {
+  margin: 0;
+  color: #d1b06b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.visit-store__eyebrow span {
+  width: 70px;
+  height: 1px;
+background: linear-gradient(90deg, transparent,
+    #d1b06b);
+}
+.visit-store__eyebrow span:last-child {
+    transform: rotate(180deg);
+
+}
+
+
+
+
+.visit-store__content h2 {
+  max-width: 600px;
+  margin: 0;
+  color: #f7f2e9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.4vw, 62px);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.visit-store__intro {
+  max-width: 570px;
+  margin: 22px 0 28px;
+  color: rgba(247, 242, 233, 0.88);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.visit-store__details {
+  display: grid;
+  gap: 20px;
+}
+
+.visit-store__detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.visit-store__detail-icon {
+  display: grid;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid #d1b06b;
+  border-radius: 13px;
+  color: #d1b06b;
+  background: rgba(23, 19, 27, 0.52);
+  font-size: 23px;
+}
+
+.visit-store__detail h3 {
+  margin: 0 0 5px;
+  color: #d1b06b;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.visit-store__detail p {
+  margin: 2px 0 0;
+  color: rgba(247, 242, 233, 0.9);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.visit-store__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.visit-store__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 22px;
+  border: 1px solid #d1b06b;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.visit-store__button:hover {
+  transform: translateY(-2px);
+}
+
+.visit-store__button--primary {
+  color: #17131b;
+  background: #d1b06b;
+}
+
+.visit-store__button--primary:hover {
+  background: #e2c78e;
+}
+
+.visit-store__button--secondary {
+  color: #d1b06b;
+  background: rgba(23, 19, 27, 0.58);
+}
+
+.visit-store__button--secondary:hover {
+  color: #17131b;
+  background: #d1b06b;
+}
+
+.visit-store__visual {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d1b06b;
+  border-radius: 24px;
+  background: #30232d;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+}
+
+.visit-store__visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.25 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .visit-store {
+    padding: 52px 24px;
+  }
+
+  .visit-store__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .visit-store__content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .visit-store__visual {
+    width: 100%;
+  }
+
+  .visit-store__visual img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 520px) {
+  .visit-store {
+    padding: 42px 16px;
+  }
+
+  .visit-store__eyebrow {
+    gap: 10px;
+  }
+
+  .visit-store__eyebrow span {
+    width: 24px;
+  }
+
+  .visit-store__eyebrow p {
+    font-size: 12px;
+    letter-spacing: 0.13em;
+  }
+
+  .visit-store__content h2 {
+    font-size: 38px;
+  }
+
+  .visit-store__intro {
+    margin: 18px 0 24px;
+    font-size: 14px;
+  }
+
+  .visit-store__details {
+    gap: 18px;
+  }
+
+  .visit-store__detail-icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+
+  .visit-store__detail h3 {
+    font-size: 15px;
+  }
+
+  .visit-store__detail p {
+    font-size: 13px;
+  }
+
+  .visit-store__actions {
+    gap: 10px;
+  }
+
+  .visit-store__button {
+    flex: 1 1 100%;
+    min-height: 50px;
+    font-size: 14px;
+  }
+
+  .visit-store__visual {
+    border-radius: 16px;
+  }
+}
