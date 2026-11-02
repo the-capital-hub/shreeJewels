@@ -1,0 +1,409 @@
+.collections-page {
+  min-height: 100vh;
+  background: #fffaf5;
+  color: #241719;
+}
+
+.collections-hero {
+  min-height: 215px;
+  display: flex;
+  align-items: center;
+  padding: 28px max(24px, calc((100% - 1280px) / 2));
+  background:
+    linear-gradient(90deg, rgba(48, 0, 12, 0.96), rgba(82, 0, 22, 0.62)),
+    url('../../assets/fearted/collection/bg.png') center 42% / cover;
+  color: #fff0c4;
+}
+
+.collections-hero-content {
+  max-width: 720px;
+}
+
+.collections-eyebrow {
+  margin: 0 0 10px;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.collections-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.collections-hero-content > p:last-child {
+  margin: 14px 0 0;
+  color: #fff8ee;
+  font-size: 16px;
+}
+
+.collections-layout {
+  width: min(1280px, calc(100% - 48px));
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 285px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.collections-sidebar {
+  padding: 22px;
+  border-radius: 14px;
+  background: #f8f0e9;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eadbd0;
+}
+
+.filter-heading h2 {
+  margin: 0;
+  color: #4c0719;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+}
+
+.filter-heading button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #790d27;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.filter-label {
+  display: block;
+  margin: 20px 0 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filter-control {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #ddc9b9;
+  border-radius: 9px;
+  background: #fffdfa;
+  color: #241719;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-control:focus,
+.sort-control select:focus {
+  border-color: #790d27;
+  box-shadow: 0 0 0 3px rgba(121, 13, 39, 0.1);
+}
+
+.price-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.collections-toolbar {
+  min-height: 44px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.collections-toolbar > p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.sort-control select {
+  min-width: 190px;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid #ddc9b9;
+  border-radius: 9px;
+  background: #fffdfa;
+  color: #241719;
+  font: inherit;
+  outline: none;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 16px;
+}
+
+.collection-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #eadbd0;
+  border-radius: 10px;
+  background: #fffdfa;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(54, 22, 22, 0.1);
+}
+
+.collection-image-wrap {
+  position: relative;
+  aspect-ratio: 1 / 0.8;
+  overflow: hidden;
+  background: #eadfd4;
+}
+
+.collection-image-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.collection-card:hover .collection-image-wrap img {
+  transform: scale(1.04);
+}
+
+.wishlist-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(66, 27, 24, 0.25);
+  color: white;
+  font-size: 29px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.wishlist-button.is-saved {
+  color: #8a0b2b;
+  background: #fffaf5;
+}
+
+.collection-card-info {
+  padding: 12px 14px 14px;
+}
+
+.collection-category {
+  margin: 0 0 5px;
+  color: #8a431d;
+  font-size: 12px;
+}
+
+.collection-card-info h3 {
+  min-height: 42px;
+  margin: 0;
+  color: #1f1718;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.collection-price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 8px;
+}
+
+.collection-price {
+  margin: 0;
+  color: #790d27;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.collection-old-price {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  text-decoration: line-through;
+}
+
+.collections-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 28px 0 10px;
+  font-size: 14px;
+}
+
+.collections-pagination button,
+.collections-empty button {
+  min-height: 42px;
+  padding: 10px 24px;
+  border: 1px solid #790d27;
+  border-radius: 9px;
+  background: #790d27;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.collections-pagination button:disabled {
+  border-color: #eadbd0;
+  background: #f8f0e9;
+  color: #9a8b84;
+  cursor: not-allowed;
+}
+
+.collections-empty {
+  padding: 50px 20px;
+  border: 1px solid #eadbd0;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.collections-empty h2 {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.collections-empty p {
+  margin: 0 0 18px;
+  color: #75666a;
+}
+
+.mobile-filter-button {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .collections-layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .collections-hero {
+    min-height: 190px;
+    padding: 26px 20px;
+    background-position: 60% center;
+  }
+
+  .collections-hero-content > p:last-child {
+    max-width: 420px;
+    font-size: 14px;
+  }
+
+  .collections-layout {
+    width: calc(100% - 32px);
+    margin: 20px auto;
+    display: block;
+  }
+
+  .collections-sidebar {
+    display: none;
+    margin-bottom: 18px;
+  }
+
+  .collections-sidebar.is-open {
+    display: block;
+  }
+
+  .collections-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .mobile-filter-button {
+    display: inline-flex;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #ddc9b9;
+    border-radius: 8px;
+    background: #fffdfa;
+    color: #4c0719;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .sort-control {
+    margin-left: auto;
+  }
+
+  .sort-control select {
+    min-width: 145px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .collection-card-info {
+    padding: 10px;
+  }
+
+  .collection-card-info h3 {
+    font-size: 14px;
+  }
+
+  .collection-price {
+    font-size: 16px;
+  }
+
+  .collections-pagination {
+    gap: 12px;
+  }
+
+  .collections-pagination button {
+    padding: 9px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sort-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sort-control select {
+    flex: 1;
+  }
+
+  .collections-grid {
+    gap: 12px;
+  }
+
+  .collection-image-wrap {
+    aspect-ratio: 1 / 0.95;
+  }
+
+  .collection-card-info h3 {
+    min-height: 58px;
+  }
+}

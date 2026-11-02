@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+.sj-register {
+  --register-wine: #4a0710;
+  --register-wine-dark: #260307;
+  --register-gold: #c18a32;
+  --register-cream: #fff4e7;
+  --register-ink: #3b1013;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  min-height: 680px;
+  color: var(--register-ink);
+  background: var(--register-cream);
+  font-family: "Manrope", sans-serif;
+}
+
+.sj-register *,
+.sj-register *::before,
+.sj-register *::after {
+  box-sizing: border-box;
+}
+
+.sj-register__visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 680px;
+  padding: 32px;
+  background:
+    linear-gradient(0deg, rgba(30, 2, 7, 0.55), transparent 45%),
+    url("../../assets/contact/login.png") center / cover no-repeat,
+    var(--register-wine-dark);
+}
+
+.sj-register__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff5e9;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sj-register__brand-mark {
+  color: var(--register-gold);
+  font-size: 32px;
+}
+
+.sj-register__panel {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(205, 156, 85, 0.12), transparent 34%),
+    var(--register-cream);
+}
+
+.sj-register__card {
+  width: min(100%, 620px);
+  padding: 26px 32px;
+  border: 1px solid #d4a65d;
+  border-radius: 20px;
+  background: rgba(255, 250, 242, 0.88);
+  box-shadow: 0 18px 50px rgba(69, 20, 15, 0.08);
+  text-align: center;
+}
+
+.sj-register__logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--register-wine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sj-register__logo-mark {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.sj-register h1 {
+  margin: 16px 0 10px;
+  color: var(--register-wine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(36px, 3.7vw, 48px);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.sj-register h1 em {
+  color: var(--register-gold);
+}
+
+.sj-register__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 76%;
+  margin: 0 auto 12px;
+  color: var(--register-gold);
+}
+
+.sj-register__ornament span {
+  flex: 1;
+  height: 1px;
+  background: #cda45f;
+}
+
+.sj-register__ornament b {
+  font-size: 18px;
+}
+
+.sj-register__intro {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  color: #4b3330;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.sj-register__form {
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+
+.sj-register__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+}
+
+.sj-register__field {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  color: var(--register-ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sj-register__field--wide {
+  grid-column: 1 / -1;
+}
+
+.sj-register__field input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #d1bca5;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--register-ink);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.sj-register__field input::placeholder {
+  color: #8a7770;
+}
+
+.sj-register__field input:focus {
+  border-color: var(--register-gold);
+  box-shadow: 0 0 0 2px rgba(193, 138, 50, 0.12);
+}
+
+.sj-register__password {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid #d1bca5;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sj-register__password:focus-within {
+  border-color: var(--register-gold);
+  box-shadow: 0 0 0 2px rgba(193, 138, 50, 0.12);
+}
+
+.sj-register__password input {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sj-register__password input:focus {
+  box-shadow: none;
+}
+
+.sj-register__password button {
+  flex-shrink: 0;
+  padding: 8px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--register-wine);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sj-register__terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #3f2c29;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.sj-register__terms input {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--register-wine);
+}
+
+.sj-register__terms a {
+  color: var(--register-wine);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sj-register__terms a:hover {
+  text-decoration: underline;
+}
+
+.sj-register__error {
+  margin: -5px 0 0;
+  color: #a31325;
+  font-size: 12px;
+}
+
+.sj-register__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #560713, #3b050c);
+  color: #fff7ed;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.sj-register__submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 5, 12, 0.2);
+}
+
+.sj-register__submit span {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.sj-register__login {
+  margin: 18px 0 0;
+  color: #4b3330;
+  font-size: 12px;
+}
+
+.sj-register__login a {
+  margin-left: 6px;
+  color: var(--register-gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sj-register__login a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .sj-register {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .sj-register__panel {
+    padding: 18px;
+  }
+
+  .sj-register__card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sj-register {
+    grid-template-columns: 1fr;
+  }
+
+  .sj-register__visual {
+    min-height: 220px;
+    padding: 24px;
+    background-position: center 58%;
+  }
+
+  .sj-register__panel {
+    padding: 20px 14px;
+  }
+
+  .sj-register__card {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sj-register__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sj-register__field--wide {
+    grid-column: auto;
+  }
+}

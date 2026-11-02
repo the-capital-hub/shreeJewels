@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+.visit-store {
+  --vs-wine: #31070b;
+  --vs-wine-dark: #210407;
+  --vs-gold: #e8bf3c;
+  --vs-cream: #fff0df;
+  --vs-text: #3b1013;
+  color: #fff9f2;
+  font-family: "Manrope", sans-serif;
+  overflow: hidden;
+}
+
+.visit-store *,
+.visit-store *::before,
+.visit-store *::after {
+  box-sizing: border-box;
+}
+
+.visit-store img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vs-hero {
+  min-height: 370px;
+  display: flex;
+  align-items: center;
+  padding: 36px 5.2%;
+  background:
+    linear-gradient(90deg, rgba(32, 3, 7, 0.98) 0%, rgba(32, 3, 7, 0.85) 36%, rgba(32, 3, 7, 0.08) 75%),
+    url("../../assets/store/image1.png") center / cover no-repeat;
+  border-bottom: 1px solid rgba(232, 191, 60, 0.35);
+}
+
+.vs-hero__content {
+  width: min(100%, 450px);
+}
+
+.vs-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 5.5vw, 64px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.vs-hero h1 em {
+  color: var(--vs-gold);
+  font-weight: 600;
+}
+
+.vs-flourish {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 340px;
+  max-width: 100%;
+  margin: 18px 0;
+  color: var(--vs-gold);
+}
+
+.vs-flourish span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--vs-gold));
+}
+
+.vs-flourish span:last-child {
+  background: linear-gradient(90deg, var(--vs-gold), transparent);
+}
+
+.vs-flourish b {
+  font-size: 25px;
+}
+
+.vs-hero p {
+  max-width: 400px;
+  margin: 0;
+  color: #fff1e6;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.vs-button,
+.vs-book-button,
+.vs-map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid var(--vs-gold);
+  border-radius: 9px;
+  color: var(--vs-gold);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.vs-button {
+  margin-top: 20px;
+}
+
+.vs-button:hover {
+  background: var(--vs-gold);
+  color: var(--vs-wine-dark);
+}
+
+.vs-info {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.1fr 1fr;
+  gap: 0;
+  padding: 25px 4.5%;
+  background: var(--vs-cream);
+  color: var(--vs-text);
+}
+
+.vs-info__item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-content: start;
+  gap: 14px;
+  min-width: 0;
+  padding: 6px 20px;
+  border-right: 1px solid rgba(159, 100, 45, 0.22);
+}
+
+.vs-info__item:first-child {
+  padding-left: 0;
+}
+
+.vs-info__item:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.vs-info__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--vs-wine);
+  color: #fff5e9;
+  font-size: 23px;
+}
+
+.vs-info h2 {
+  margin: 2px 0 6px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.vs-info p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.vs-info p strong {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.vs-book-button {
+  gap: 12px;
+  min-height: 36px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-color: #a96b20;
+  color: var(--vs-text);
+}
+
+.vs-book-button:hover,
+.vs-map-button:hover {
+  background: var(--vs-wine);
+  color: #fff5e9;
+}
+
+.vs-welcome {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: var(--vs-wine);
+}
+
+.vs-welcome__image {
+  min-height: 330px;
+}
+
+.vs-welcome__content {
+  position: relative;
+  align-self: center;
+  padding: 28px 9%;
+  overflow: hidden;
+}
+
+.vs-label {
+  color: var(--vs-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.vs-welcome h2 {
+  margin: 8px 0 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(35px, 4vw, 45px);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.vs-short-line {
+  width: 60px;
+  height: 2px;
+  margin: 14px 0;
+  background: var(--vs-gold);
+}
+
+.vs-welcome__content > p {
+  max-width: 470px;
+  margin: 0;
+  color: #f8e8df;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.vs-welcome ul {
+  display: grid;
+  gap: 9px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vs-welcome li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.vs-welcome li span {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--vs-gold);
+  border-radius: 50%;
+  color: var(--vs-gold);
+}
+
+.vs-leaf-decoration {
+  position: absolute;
+  right: -22px;
+  bottom: 20px;
+  width: 120px !important;
+  height: 160px !important;
+  object-fit: cover;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.vs-map {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: center;
+  gap: 30px;
+  padding: 28px 4.5%;
+  background: var(--vs-cream);
+  color: var(--vs-text);
+}
+
+.vs-map__details h2 {
+  margin: 0 0 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(32px, 4vw, 42px);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.vs-map__address {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.vs-map__address > span {
+  font-size: 29px;
+  line-height: 1;
+}
+
+.vs-map__address p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.vs-map-button {
+  margin-top: 20px;
+  border-color: #a96b20;
+  color: var(--vs-text);
+}
+
+.vs-map__embed {
+  height: 255px;
+  overflow: hidden;
+  border: 1px solid #d4a13d;
+  border-radius: 15px;
+  background: #eadfcf;
+}
+
+.vs-map__embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .vs-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+
+  .vs-info__item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .vs-info__item:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .vs-welcome {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vs-welcome__content {
+    padding: 28px 6%;
+  }
+
+  .vs-map {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .vs-hero {
+    min-height: 460px;
+    align-items: flex-end;
+    padding: 28px 20px;
+    background:
+      linear-gradient(0deg, rgba(32, 3, 7, 0.98), rgba(32, 3, 7, 0.08)),
+      url("/images/store-exterior.jpg") 58% center / cover no-repeat;
+  }
+
+  .vs-hero h1 {
+    font-size: 46px;
+  }
+
+  .vs-info {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 20px;
+  }
+
+  .vs-info__item,
+  .vs-info__item:first-child,
+  .vs-info__item:nth-child(3),
+  .vs-info__item:last-child {
+    padding: 0 0 16px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(159, 100, 45, 0.22);
+  }
+
+  .vs-info__item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .vs-welcome {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-welcome__image {
+    min-height: 260px;
+    max-height: 300px;
+  }
+
+  .vs-welcome__content {
+    padding: 28px 22px;
+  }
+
+  .vs-map {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 28px 20px;
+  }
+
+  .vs-map__embed {
+    height: 230px;
+  }
+}

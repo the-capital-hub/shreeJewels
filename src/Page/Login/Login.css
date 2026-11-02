@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+.sj-login {
+  --sj-wine: #4a0710;
+  --sj-wine-dark: #260307;
+  --sj-gold: #c18a32;
+  --sj-cream: #fff4e7;
+  --sj-ink: #3b1013;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 650px;
+  color: var(--sj-ink);
+  background: var(--sj-cream);
+  font-family: "Manrope", sans-serif;
+}
+
+.sj-login *,
+.sj-login *::before,
+.sj-login *::after {
+  box-sizing: border-box;
+}
+
+.sj-login__visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 650px;
+  padding: 34px;
+  background:
+    linear-gradient(0deg, rgba(30, 2, 7, 0.65), transparent 45%),
+    url("../../assets/contact/login.png") center / cover no-repeat,
+    var(--sj-wine-dark);
+}
+
+.sj-login__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff5e9;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.sj-login__lotus {
+  color: var(--sj-gold);
+  font-size: 32px;
+}
+
+.sj-login__panel {
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(205, 156, 85, 0.1), transparent 34%),
+    var(--sj-cream);
+}
+
+.sj-login__card {
+  width: min(100%, 470px);
+  padding: 36px 38px;
+  border: 1px solid #d4a65d;
+  border-radius: 22px;
+  background: rgba(255, 250, 242, 0.84);
+  box-shadow: 0 18px 50px rgba(69, 20, 15, 0.08);
+  text-align: center;
+}
+
+.sj-login__logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--sj-wine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sj-login__logo-mark {
+  color: var(--sj-wine);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.sj-login h1 {
+  margin: 22px 0 12px;
+  color: var(--sj-wine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.sj-login h1 em {
+  color: var(--sj-gold);
+}
+
+.sj-login__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 80%;
+  margin: 0 auto 18px;
+  color: var(--sj-gold);
+}
+
+.sj-login__ornament span {
+  flex: 1;
+  height: 1px;
+  background: #cda45f;
+}
+
+.sj-login__ornament b {
+  font-size: 19px;
+}
+
+.sj-login__intro {
+  margin: 0 0 24px;
+  color: #4b3330;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.sj-login__form {
+  display: grid;
+  gap: 14px;
+}
+
+.sj-login__field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid #d1bca5;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.sj-login__field:focus-within {
+  border-color: var(--sj-gold);
+  box-shadow: 0 0 0 2px rgba(193, 138, 50, 0.12);
+}
+
+.sj-login__field-icon {
+  color: var(--sj-wine);
+  font-size: 22px;
+}
+
+.sj-login__field input {
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--sj-ink);
+  font: inherit;
+  font-size: 13px;
+}
+
+.sj-login__field input::placeholder {
+  color: #8a7770;
+}
+
+.sj-login__show-password {
+  padding: 5px 0 5px 5px;
+  border: 0;
+  background: transparent;
+  color: var(--sj-wine);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sj-login__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 1px 0 4px;
+  font-size: 12px;
+}
+
+.sj-login__remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sj-login__remember input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--sj-wine);
+}
+
+.sj-login__options a,
+.sj-login__signup a {
+  color: var(--sj-wine);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sj-login__options a:hover,
+.sj-login__signup a:hover {
+  text-decoration: underline;
+}
+
+.sj-login__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 52px;
+  margin-top: 3px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #560713, #3b050c);
+  color: #fff7ed;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.sj-login__submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 5, 12, 0.2);
+}
+
+.sj-login__submit span {
+  font-family: sans-serif;
+  font-size: 21px;
+}
+
+.sj-login__signup {
+  margin: 20px 0 0;
+  color: #4b3330;
+  font-size: 13px;
+}
+
+.sj-login__signup a {
+  margin-left: 5px;
+  color: var(--sj-gold);
+}
+
+@media (max-width: 760px) {
+  .sj-login {
+    grid-template-columns: 1fr;
+  }
+
+  .sj-login__visual {
+    min-height: 240px;
+    padding: 24px;
+    background-position: center 58%;
+  }
+
+  .sj-login__panel {
+    padding: 22px 16px;
+  }
+
+  .sj-login__card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .sj-login__options {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
